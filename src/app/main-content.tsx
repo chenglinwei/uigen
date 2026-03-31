@@ -14,6 +14,7 @@ import { CodeEditor } from "@/components/editor/CodeEditor";
 import { PreviewFrame } from "@/components/preview/PreviewFrame";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { HeaderActions } from "@/components/HeaderActions";
+import { Sparkles } from "lucide-react";
 
 interface MainContentProps {
   user?: {
@@ -43,7 +44,12 @@ export function MainContent({ user, project }: MainContentProps) {
               <div className="h-full flex flex-col bg-white">
                 {/* Chat Header */}
                 <div className="h-14 flex items-center px-6 border-b border-neutral-200/60">
-                  <h1 className="text-lg font-semibold text-neutral-900 tracking-tight">React Component Generator</h1>
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-neutral-900">
+                      <Sparkles className="w-4 h-4 text-white" />
+                    </div>
+                    <h1 className="text-lg font-semibold text-neutral-900 tracking-tight">UIGen</h1>
+                  </div>
                 </div>
 
                 {/* Chat Content */}
